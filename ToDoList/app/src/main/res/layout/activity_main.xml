@@ -9,6 +9,22 @@
     tools:context=".MainActivity"
     android:background="@drawable/gradients">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="328dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="26dp"
+        android:clickable="true"
+        android:tint="#FFFFFF"
+        app:backgroundTint="#7E64FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#FFFFFF"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
