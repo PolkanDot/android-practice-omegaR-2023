@@ -40,6 +40,7 @@ class MainActivityViewBinding : AppCompatActivity() {
     private fun onAddButtonClicked() {
         setVisibility(clicked)
         setAnimation(clicked)
+        setClickable(clicked)
         clicked = !clicked
     }
 
@@ -64,6 +65,17 @@ class MainActivityViewBinding : AppCompatActivity() {
             binding.addButton.startAnimation(rotateClose)
             binding.addNoteButton.startAnimation(toBottom)
             binding.addEventButton.startAnimation(toBottom)
+        }
+    }
+
+    private fun setClickable(clicked: Boolean) {
+        if (!clicked)
+        {
+            binding.addNoteButton.isClickable = true
+            binding.addEventButton.isClickable = true
+        } else{
+            binding.addNoteButton.isClickable = false
+            binding.addEventButton.isClickable = false
         }
     }
 }
