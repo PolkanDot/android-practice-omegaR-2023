@@ -12,5 +12,11 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >@color/gradient_light</item>
         <!-- Customize your theme here. -->
+        <item name="android:textAllCaps" >"false"</item>
+    </style>
+
+    <style name="Chapter.Button" parent="Theme.ToDoList">
+        <item name="android:textSize">"16dp"</item>
+        <item name="android:fontFamily">@font/nunito_semibold</item>
     </style>
 </resources>

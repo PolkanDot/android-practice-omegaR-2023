@@ -9,6 +9,106 @@
     tools:context=".MainActivityViewBinding"
     android:background="@drawable/gradients">
 
+    <RadioGroup
+        android:checkedButton="@+id/offer"
+        android:id="@+id/toggle"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/switcher_round_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginStart="1dp"
+            android:id="@+id/search"
+            android:background="@drawable/toggle_widget_background"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Search"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:id="@+id/offer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/toggle_widget_background"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Offers"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/switcherBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintWidth_percent="0.75"
+        app:layout_constraintHeight_percent="0.065"
+
+        app:layout_constraintHeight_max="200dp"
+        app:layout_constraintWidth_max="600dp"
+        app:layout_constraintHeight_min="49dp"
+        app:layout_constraintWidth_min="200dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.2"
+
+        android:background="@drawable/switcher_round_bg"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/switcherCalendarButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/Chapter.Button"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="@string/schedule_chapter"
+
+        app:layout_constraintBottom_toBottomOf="@+id/switcherBackground"
+        app:layout_constraintEnd_toEndOf="@+id/switcherBackground"
+        app:layout_constraintStart_toStartOf="@+id/switcherBackground"
+        app:layout_constraintTop_toTopOf="@+id/switcherBackground"
+
+        app:layout_constraintHorizontal_bias="0.04"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/switcherNoteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/Chapter.Button"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:text="@string/note_chapter"
+
+        app:layout_constraintBottom_toBottomOf="@+id/switcherBackground"
+        app:layout_constraintEnd_toEndOf="@+id/switcherBackground"
+        app:layout_constraintStart_toStartOf="@+id/switcherBackground"
+        app:layout_constraintTop_toTopOf="@+id/switcherBackground"
+
+        app:layout_constraintHorizontal_bias="0.96" />
+
+
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addNoteButton"
         android:layout_width="wrap_content"
@@ -19,7 +119,7 @@
         android:clickable="true"
         android:focusable="true"
         android:visibility="invisible"
-        app:backgroundTint="#7E64FF"
+        app:backgroundTint="@color/floating_button_bg"
         app:layout_constraintBottom_toTopOf="@+id/addEventButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +136,7 @@
         android:clickable="true"
         android:focusable="true"
         android:visibility="invisible"
-        app:backgroundTint="#7E64FF"
+        app:backgroundTint="@color/floating_button_bg"
         app:layout_constraintBottom_toTopOf="@+id/addButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +153,7 @@
         android:layout_marginBottom="26dp"
         android:clickable="true"
         android:focusable="true"
-        app:backgroundTint="#7E64FF"
+        app:backgroundTint="@color/floating_button_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

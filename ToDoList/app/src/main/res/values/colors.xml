@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gradient_dark">#0C0716</color>
     <color name="gradient_light">#35305D</color>
+    <color name="chapter_button_purple_light">#3C1F7B</color>
+    <color name="chapter_button_purple_dark">#3C1F7B</color>
+    <color name="floating_button_bg">#7E64FF</color>
 </resources>

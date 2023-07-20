@@ -17,12 +17,13 @@ class MainActivityViewBinding : AppCompatActivity() {
     private val fromBottom: Animation by lazy { android.view.animation.AnimationUtils.loadAnimation(this, R.anim.from_bottom_anim)}
     private val toBottom: Animation by lazy { android.view.animation.AnimationUtils.loadAnimation(this, R.anim.to_bottom_anim)}
 
-    private var clicked = false
+    private var addButtonClicked = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super .onCreate(savedInstanceState)
         binding = ActivityMainBinding. inflate(layoutInflater)
         setContentView(binding. root)
+
 
         binding.addButton.setOnClickListener {
             onAddButtonClicked()
@@ -38,10 +39,10 @@ class MainActivityViewBinding : AppCompatActivity() {
     }
 
     private fun onAddButtonClicked() {
-        setVisibility(clicked)
-        setAnimation(clicked)
-        setClickable(clicked)
-        clicked = !clicked
+        setVisibility(addButtonClicked)
+        setAnimation(addButtonClicked)
+        setClickable(addButtonClicked)
+        addButtonClicked = !addButtonClicked
     }
 
     private fun setAnimation(clicked: Boolean) {
